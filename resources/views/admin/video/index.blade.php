@@ -21,7 +21,7 @@
                                 <th>#</th>
                                 <th>Tiêu đề </th>
                                 <th>URL</th>
-                                <th>Is Video?</th>
+                                <th>Desc</th>
                                 <th>Image</th>
                                 <th>Hành động</th>
                             </tr>
@@ -32,7 +32,7 @@
                                     <td>{{$video->id}}</td>
                                     <td>{{$video->title}}</td>
                                     <td>{{$video->url}}</td>
-                                    <td>{{($video->is_video) ? 'Yes' : 'No'}}</td>
+                                    <td>{{$video->desc}}</td>
                                     <td><img src="{{url('t/110x70', $video->image)}}" /></td>
                                     <td>
                                         <button id-attr="{{$video->id}}" class="btn btn-primary btn-sm edit-video"  type="button">Sửa</button>

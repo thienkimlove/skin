@@ -33,21 +33,15 @@
             </div>
 
             <div class="form-group">
-                    {!! Form::label('url', 'Media URL') !!}
-                    {!! Form::text('url', null, ['class' => 'form-control']) !!}
+                {!! Form::label('url', 'Media URL') !!}
+                {!! Form::text('url', null, ['class' => 'form-control']) !!}
             </div>
 
-                <div class="form-group">
-                    {!! Form::label('desc', 'Mo ta Media') !!}
-                    {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
-                </div>
+            <div class="form-group">
+                {!! Form::label('desc', 'Mo ta Media') !!}
+                {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
+            </div>
 
-
-
-                <div class="form-group">
-                    {!! Form::label('is_video', 'Is Video?') !!}
-                    {!! Form::checkbox('is_video', null, null) !!}
-                </div>
 
             <div class="form-group">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}

@@ -16,15 +16,12 @@ class CreateVideos extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
+			$table->text('desc');
 			$table->string('slug')->unique();
 			$table->string('image')->unique();
-			$table->boolean('hot')->default(false);
 			$table->integer('views')->default(0);
-			$table->string('file_name');
-			$table->integer('product_id')->unsigned();
+			$table->string('url');
 			$table->timestamps();
-
-			$table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 		});
 	}
 
