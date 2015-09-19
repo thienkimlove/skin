@@ -32,7 +32,9 @@
                                 <td>{{ ($cat->parent_id) ? 'Con' : 'Cha'}}</td>
                                 <td>
                                     <button id-attr="{{$cat->id}}" class="btn btn-primary btn-sm edit-category" type="button">Edit</button>&nbsp;
-                                    <button class="btn btn-primary btn-sm" type="button">Delete</button>
+                                    {!! Form::open(['method' => 'DELETE', 'route' => ['admin.categories.destroy', $cat->id]]) !!}
+                                    <button type="submit" class="btn btn-danger btn-mini">Xoa</button>
+                                    {!! Form::close() !!}
                                 </td>
                             </tr>
                             @endforeach
