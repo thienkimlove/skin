@@ -56,6 +56,30 @@ return array(
             return $image->fit(110, 70);
         },
 
+        '320x220' => function($image) {
+            return $image->fit(320, 220);
+        },
+
+        '130x80' => function($image) {
+            return $image->fit(130, 80);
+        },
+
+        '274x174' => function($image) {
+            return $image->fit(274, 174);
+        },
+
+        '60x60' => function($image) {
+            return $image->fit(60, 60);
+        },
+
+        '320x180' => function($image) {
+            return $image->fit(320, 180);
+        },
+
+        '140x140' => function($image) {
+            return $image->fit(140, 140);
+        },
+
     ),
 
     /*

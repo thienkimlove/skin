@@ -8,6 +8,7 @@ use App\Http\Requests\QuestionRequest;
 use App\Http\Requests\RegisterEmailRequest;
 use App\Post;
 use App\Question;
+use App\Setting;
 use App\Tag;
 use App\Video;
 use Illuminate\Http\Request;
@@ -18,34 +19,22 @@ class MainController extends Controller
     public function index()
     {
         $page = 'index';
+        $questions = Question::latest('updated_at')->limit(10)->get();
+        $trangmintunhien = Post::whereHas('modules', function($q){
+            $q->where('slug', 'trang-min-trang-chu')->orderBy('order');
+        })->limit(4)->get();
+
+
+        $videos = Video::latest('updated_at')->limit(3)->get();
+
         return view('frontend.index', compact(
-            'page'
+            'page', 'questions','trangmintunhien', 'videos'
         ))->with([
             'meta_title' => 'Trang chủ | '.env('META_TITLE'),
             'meta_desc' =>  'Trang chủ '.env('META_TITLE'),
             'meta_keywords' => env('META_KEYWORDS'),
         ]);
     }
-
-
-    public function question($slug) {
-        $page = 'hoi-dap-chuyen-gia';
-        $question = Question::where('slug', $slug)->first();
-        $related = Question::where('id', '<>', $question->id)->latest('updated_at')->limit(6)->get();
-
-
-        return view('frontend.question_details', compact(
-            'page',
-            'question',
-            'related'
-        ))->with([
-            'meta_title' => $question->question.' | '.env('META_TITLE'),
-            'meta_desc' =>  $question->question.' '.env('META_TITLE'),
-            'meta_keywords' => env('META_KEYWORDS'),
-        ]);
-
-    }
-
 
     public function tag($keyword)
     {
@@ -96,7 +85,8 @@ class MainController extends Controller
     public function lycoskin()
     {
         $page = 'lyco-skin';
-        return view('frontend.lycoskin', compact('page'))->with([
+        $settings = Setting::lists('value', 'name');
+        return view('frontend.lycoskin', compact('page', 'settings'))->with([
             'meta_title' => env('META_TITLE'),
             'meta_desc' =>  env('META_TITLE'),
             'meta_keywords' => env('META_KEYWORDS'),

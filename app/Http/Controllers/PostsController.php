@@ -11,7 +11,8 @@ use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
 
-class PostsController extends BaseController {
+class PostsController extends BaseController
+{
 
     public $modules, $tags, $categories;
 
@@ -20,11 +21,15 @@ class PostsController extends BaseController {
         $this->middleware('admin');
 
         $this->modules = [
-            'best-news-trang-chu' => 'Hiện thị trang chủ',
+            'trang-min-trang-chu' => 'Hiện thị Box "Trắng mịn tự nhiên" trang chủ',
+            'box-chia-se' => 'Hiện thị Box "Chia sẻ"',
+            'box-news' => 'Hiện thị Box "Tin tức"',
+            'right-new-post' => 'Hiện thị Bài Mới Cột Phải',
+            'right-most-read' => 'Hiện thị Bài Đọc Nhiều Cột Phải',
         ];
 
 
-        $categories = Category::all()->filter(function($item){
+        $categories = Category::all()->filter(function ($item) {
             return $item->subCategories->count() == 0;
         })->lists('name', 'id');
 
@@ -37,7 +42,7 @@ class PostsController extends BaseController {
         if (!empty($request->input('modules'))) {
             foreach ($request->input('modules') as $key => $values) {
                 if (isset($values['display'])) {
-                    $order = (int) $values['order'];
+                    $order = (int)$values['order'];
                     $module = Module::where('post_id', $post->id)
                         ->where('slug', $key)
                         ->first();
@@ -77,7 +82,7 @@ class PostsController extends BaseController {
         $posts = Post::latest('updated_at');
         if ($request->input('q')) {
             $searchPost = urldecode($request->input('q'));
-            $posts = $posts->where('title', 'LIKE', '%'. $searchPost. '%');
+            $posts = $posts->where('title', 'LIKE', '%' . $searchPost . '%');
         }
 
         if ($request->input('cat')) {
@@ -100,7 +105,7 @@ class PostsController extends BaseController {
 
     public function store(PostRequest $request)
     {
-       // dd($request->all());
+        // dd($request->all());
         $insert = [
             'title' => $request->input('title'),
             'category_id' => $request->input('category_id'),
@@ -160,7 +165,7 @@ class PostsController extends BaseController {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return Response
      */
     public function destroy($id)

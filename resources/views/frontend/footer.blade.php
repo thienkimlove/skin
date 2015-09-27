@@ -4,11 +4,11 @@
             <div class="item itemLeft">
                 <h3>Danh mục</h3>
                 <ul class="listCategory clearFix">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Trắng mịn tự nhiên</a></li>
-                    <li><a href="#">Lycoskin</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                    <li><a href="#">Chia sẻ</a></li>
+                    <li><a href="{{url('/')}}" class="{{(!empty($page) &&  $page == 'index') ? 'active' : ''}}">Trang chủ</a></li>
+                    <li><a class="{{(!empty($page) &&  $page == 'trang-min-tu-nhien') ? 'active' : ''}}" href="{{url('trang-min-tu-nhien')}}">Trắng mịn tự nhiên</a></li>
+                    <li><a class="{{(!empty($page) &&  $page == 'lyco-skin') ? 'active' : ''}}" href="{{url('lyco-skin')}}">Lycoskin</a></li>
+                    <li><a class="{{(!empty($page) &&  $page == 'tin-tuc') ? 'active' : ''}}" href="{{url('tin-tuc')}}">Tin tức</a></li>
+                    <li><a class="{{(!empty($page) &&  $page == 'chia-se') ? 'active' : ''}}" href="{{url('chia-se')}}">Chia sẻ</a></li>
                 </ul>
             </div>
             <div class="item itemMid">

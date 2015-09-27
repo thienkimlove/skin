@@ -42,6 +42,11 @@
                 {!! Form::textarea('desc', null, ['class' => 'form-control']) !!}
             </div>
 
+                <div class="form-group">
+                    {!! Form::label('hot', 'Is Hot') !!}
+                    {!! Form::checkbox('hot', null, null) !!}
+                </div>
+
 
             <div class="form-group">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}

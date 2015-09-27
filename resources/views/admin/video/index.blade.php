@@ -23,6 +23,7 @@
                                 <th>URL</th>
                                 <th>Desc</th>
                                 <th>Image</th>
+                                <th>Hot</th>
                                 <th>Hành động</th>
                             </tr>
                             </thead>
@@ -34,6 +35,7 @@
                                     <td>{{$video->url}}</td>
                                     <td>{{$video->desc}}</td>
                                     <td><img src="{{url('t/110x70', $video->image)}}" /></td>
+                                    <td>{{($video->hot) ? 'Yes' : 'No'}}</td>
                                     <td>
                                         <button id-attr="{{$video->id}}" class="btn btn-primary btn-sm edit-video"  type="button">Sửa</button>
                                         <br>

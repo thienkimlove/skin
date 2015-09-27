@@ -11,7 +11,7 @@
 */
 use App\Category;
 use App\Post;
-use App\Product;
+use App\Setting;
 
 Route::resource('admin/posts', 'PostsController');
 Route::resource('admin/categories', 'CategoriesController');
@@ -39,40 +39,36 @@ Route::get('lien-he', 'MainController@lienhe');
 Route::get('lyco-skin', 'MainController@lycoskin');
 
 
-
 Route::get('/', 'MainController@index');
 
 Route::get('{value}', function ($value) {
     if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {
         $page = 'post_detail';
-        $post = Post::where('slug', $matches[1])->first();
-
-        return view('frontend.post_detail', compact('post', 'page'))->with([
-            'meta_title' => $post->title . ' | '.env('META_TITLE'),
-            'meta_desc' => $post->desc,
-            'meta_keywords' => ($post->tagList) ? implode(',', $post->tagList) : env('META_KEYWORDS'),
+        $mPost = Post::where('slug', $matches[1])->first();
+        $settings = Setting::lists('value', 'name');
+        return view('frontend.post_detail', compact('mPost', 'page', 'settings'))->with([
+            'meta_title' => $mPost->title . ' | ' . env('META_TITLE'),
+            'meta_desc' => $mPost->desc,
+            'meta_keywords' => ($mPost->tagList) ? implode(',', $mPost->tagList) : env('META_KEYWORDS'),
         ]);
     } else {
         $page = $value;
-
         if ($value == 'hoi-dap-chuyen-gia') {
             $questions = \App\Question::paginate(10);
-            return view('frontend.'.$value, compact('page', 'questions'))->with([
-                'meta_title' => 'Hỏi Đáp Chuyên Gia | '.env('META_TITLE'),
-                'meta_desc' =>  'Hỏi Đáp Chuyên Gia '.env('META_TITLE'),
+            return view('frontend.questions', compact('page', 'questions'))->with([
+                'meta_title' => 'Hỏi Đáp Chuyên Gia | ' . env('META_TITLE'),
+                'meta_desc' => 'Hỏi Đáp Chuyên Gia ' . env('META_TITLE'),
                 'meta_keywords' => env('META_KEYWORDS'),
             ]);
         }
         $category = Category::where('slug', $value)->first();
-
         $posts = $category->posts()->paginate(10);
         $view = ($value == 'phan-phoi') ? $value : 'category';
-
-        return view('frontend.'.$view, compact(
+        return view('frontend.' . $view, compact(
             'category', 'page', 'posts'
         ))->with([
-            'meta_title' => $category->name.' | '.env('META_TITLE'),
-            'meta_desc' =>  $category->name.' '.env('META_TITLE'),
+            'meta_title' => $category->name . ' | ' . env('META_TITLE'),
+            'meta_desc' => $category->name . ' ' . env('META_TITLE'),
             'meta_keywords' => env('META_KEYWORDS'),
         ]);
     }

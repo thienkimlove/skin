@@ -20,7 +20,8 @@ class Video extends Model implements SluggableInterface {
         'slug',
         'url',
         'image',
-        'desc'
+        'desc',
+        'hot'
     ];
 
 
