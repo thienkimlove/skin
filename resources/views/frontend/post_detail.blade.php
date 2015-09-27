@@ -5,7 +5,7 @@
             <div class="contentLeft">
                 <div class="boxNews clearFix">
                     <h3 class="globalTitle">
-                      {{$category->title}}
+                      {{$post->category->name}}
                     </h3>
                     <div class="contentDetail">
                         <h3>{{$mPost->title}}</h3>
