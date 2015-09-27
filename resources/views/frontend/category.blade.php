@@ -6,7 +6,7 @@
             <div class="contentLeft">
                 <div class="boxNews clearFix">
                     <h3 class="globalTitle">
-                       {{$category->title}}
+                       {{$category->name}}
                     </h3>
                     <div class="listNews fullWidth">
                         @foreach ($posts as $post)
