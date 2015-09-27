@@ -8,6 +8,8 @@ class Question extends Model implements SluggableInterface {
 
     use SluggableTrait;
 
+    protected $dates = ['updated_at', 'created_at'];
+
     protected $sluggable = array(
         'build_from' => 'question',
         'save_to'    => 'slug',
