@@ -17,7 +17,6 @@ class Post extends Model implements SluggableInterface {
         'on_update'       => true,
     );
 
-    protected $dates = ['updated_at', 'created_at'];
 
 
     protected $fillable = [

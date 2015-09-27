@@ -15,7 +15,7 @@
                                     <img src="{{url('t/320x180', $question->image)}}" alt="List news">
                                 </a>
                                 <h3><a href="#">{{str_limit($question->question, env('TRIM_TITLE'))}}</a></h3>
-                                <span class="date">{{$question->updated_at->format('D/m/Y')}}</span>
+                                <span class="date">{{ \Carbon\Carbon::parse($question->updated_at)->format('D/m/Y')}}</span>
                                 <p>{{str_limit($question->answer, env('TRIM_DESC'))}}</p>
                                 <a href="#" class="readMore">Chi tiết</a>
                             </div>

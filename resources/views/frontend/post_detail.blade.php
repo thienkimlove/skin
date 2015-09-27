@@ -9,7 +9,7 @@
                     </h3>
                     <div class="contentDetail">
                         <h3>{{$mPost->title}}</h3>
-                        <span class="date">{{$mPost->updated_at->format('D/m/Y')}}</span>
+                        <span class="date">{{ \Carbon\Carbon::parse($mPost->updated_at)->format('D/m/Y')}}</span>
                         {!! $mPost->content !!}
                     </div>
                     <div class="boxLike">
