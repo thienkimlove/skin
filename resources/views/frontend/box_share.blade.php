@@ -9,7 +9,7 @@
                             <img src="{{url('t/274x174', $post->image)}}"/>
                         </a>
                         <h3><a href="{{url($post->slug.'.html')}}">{{str_limit($post->title, env('TRIM_TITLE'))}}</a></h3>
-                        <span class="date">{{url($post->updated_at->format('D/m/Y'))}}</span>
+                        <span class="date">{{\Carbon\Carbon::parse($post->updated_at)->format('D/m/Y')}}</span>
                         <p>{{str_limit($post->desc, env('TRIM_DESC'))}}</p>
                         <a href="{{url($post->slug.'.html')}}" class="readMore" title="Đọc thêm">Đọc thêm</a>
                     </div>
