@@ -46,9 +46,9 @@
                 <ul class="listQuestion" id="listQuestions">
                     @foreach ($questions as $question)
                     <li>
-                        <a href="{{url('hoi-dap-chuyen-gia')}}"><span>{{str_limit($question->question, env('TRIM_TITLE'))}}</span></a>
+                        <a href="#"><span>{{str_limit($question->question, env('TRIM_TITLE'))}}</span></a>
                         <div class="contentQuestion">
-                            <p>{{str_limit($question->answer, env('TRIM_DESC'))}}</p>
+                            <p>{{$question->answer}}</p>
                         </div>
                     </li>
                     @endforeach
