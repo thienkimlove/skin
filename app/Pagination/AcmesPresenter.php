@@ -56,7 +56,7 @@ class AcmesPresenter implements PresenterContract {
         if ($this->hasPages())
         {
             return sprintf(
-                '<ul class="nav-paging">%s %s %s</ul>',
+                '<ul class="navPaging">%s %s %s</ul>',
                 $this->getPreviousButton(),
                 $this->getLinks(),
                 $this->getNextButton()
