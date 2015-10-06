@@ -99,7 +99,7 @@ class MainController extends Controller
         $posts = Post::where('title', 'LIKE', '%'.$keyword.'%')
             ->where('status', true)
             ->paginate(10);
-        return view('frontend.category', compact('posts', 'keyword'))->with([
+        return view('frontend.search', compact('posts', 'keyword'))->with([
             'meta_title' => ' Các bài viết với nhãn '.$keyword.' tại '.env('META_TITLE'),
             'meta_desc' => '',
             'meta_keywords' => $keyword,
