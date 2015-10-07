@@ -266,6 +266,12 @@ section, header, footer {
   text-transform: uppercase;
   padding: 10px 0 10px 10px;
 }
+.globalTitle a {
+  color: #333;
+}
+.globalTitle a:hover {
+  color: #eb008b;
+}
 
 .readMore, .btnSubmit, .btnReset {
   background: #fff;
@@ -372,7 +378,6 @@ section, header, footer {
 }
 .boxSale a {
   display: block;
-  border: 1px solid #b2b2b2;
 }
 
 .boxConsult a {
@@ -461,6 +466,12 @@ section, header, footer {
 .boxNews > .thumb h3 {
   font-size: 14px;
 }
+.boxNews > .thumb h3 a {
+  color: #333;
+}
+.boxNews > .thumb h3 a:hover {
+  color: #eb008b;
+}
 .boxNews > .thumb .readMore {
   margin-top: 10px;
   float: right;
@@ -486,6 +497,9 @@ section, header, footer {
 }
 .boxNews .listNews h3 a {
   color: #333;
+}
+.boxNews .listNews h3 a:hover {
+  color: #eb008b;
 }
 .boxNews .listNews .readMore {
   float: right;
