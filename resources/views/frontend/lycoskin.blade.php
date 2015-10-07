@@ -11,18 +11,6 @@
                     </ul>
                     <div id="tabInfo" class="tabProduct active">
                         {!! $settings['tab_product_content'] !!}
-                        <div class="boxLike">
-                            <div class="fb-like"></div>
-                        </div>
-                        <div class="boxTags">
-                            <span>TAG</span>
-                            <a href="" title="">Thuốc diệt chuột</a>
-                            <a href="" title="">Thuốc tốt</a>
-                            <a href="" title="">Thuốc hay</a>
-                        </div>
-                        <div class="boxComment">
-                            <div class="fb-comments" data-href="https://www.facebook.com/tuelinh.vn" data-numposts="5"></div>
-                        </div>
                     </div>
                     <!-- endTab01 -->
                     <div id="tabChoose" class="tabProduct">
