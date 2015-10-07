@@ -484,6 +484,9 @@ section, header, footer {
 .boxNews .listNews h3 {
   margin-bottom: 10px;
 }
+.boxNews .listNews h3 a {
+  color: #333;
+}
 .boxNews .listNews .readMore {
   float: right;
 }

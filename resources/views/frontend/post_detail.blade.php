@@ -5,7 +5,7 @@
             <div class="contentLeft">
                 <div class="boxNews clearFix">
                     <h3 class="globalTitle">
-                      {{$mPost->category->name}}
+                      <a href="{{url($mPost->category->slug)}}">{{$mPost->category->name}}</a>
                     </h3>
                     <div class="contentDetail">
                         <h3>{{$mPost->title}}</h3>

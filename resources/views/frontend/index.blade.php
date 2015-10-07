@@ -6,14 +6,14 @@
         <div class="contentLeft">
             <div class="boxRecommended">
                 <h3 class="globalTitle">
-                    Lý do nên chọn Lycoskin
+                   <a href="{{url('lyco-skin')}}">Lý do nên chọn Lycoskin</a>
                 </h3>
                 <a href="{{url('lyco-skin')}}"><img src="{{url('imgs/temp/img01.jpg')}}" alt="Lý do chọn Lycoskin" width="640" height="325"></a>
             </div>
             <!-- /endboxRecommended -->
             <div class="boxNews clearFix">
                 <h3 class="globalTitle">
-                    Trắng mịn tự nhiên
+                   <a href="{{url('trang-min-tu-nhien')}}"> Trắng mịn tự nhiên</a>
                 </h3>
                 @if ($first = $trangmintunhien->shift())
                 <div class="thumb">
@@ -42,7 +42,7 @@
         </div>
         <div class="contentRight">
             <div class="boxQuestion">
-                <h3 class="globalTitle"> Câu hỏi thường gặp</h3>
+                <h3 class="globalTitle"> <a href="{{url('hoi-dap-chuyen-gia')}}">Câu hỏi thường gặp</a></h3>
                 <ul class="listQuestion" id="listQuestions">
                     @foreach ($questions as $question)
                     <li>
@@ -57,7 +57,7 @@
             <!-- /endQuestion -->
             <div class="boxVideo">
                 <h3 class="globalTitle">
-                    Video
+                    <a href="{{url('video')}}">Video</a>
                 </h3>
                 <div class="content">
                     @if ($video = $videos->shift())
@@ -73,7 +73,7 @@
             <!-- /endVideo -->
             <div class="boxSale">
                 <h3 class="globalTitle">
-                    Điểm bán
+                    <a href="{{url('phan-phoi')}}">Điểm bán</a>
                 </h3>
                 <a href="{{url('phan-phoi')}}"><img src="{{url('imgs/temp/sale.jpg')}}" alt="Sale" width="300" height="131"></a>
             </div>
