@@ -287,8 +287,7 @@ section, header, footer {
 .boxBanner {
   /* background: url('../imgs/bg/bgBanner.jpg') no-repeat center center; */
   background-size: cover;
-  height: 476px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .boxBanner.bg01 {
   background: #f4f3f2;

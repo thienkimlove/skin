@@ -16,12 +16,12 @@
                 <p>
                     Công ty TNHH Tuệ Linh <br>
                     Địa chỉ: Tòa nhà 29T1. Hoàng Đạo Thúy, Trung Hoà, Hà Nội <br>
-                    Email: info@tuelinh.com <br>
-                    Tel: 0123 456 789 <br>
-                    Fax: 0123 456 789 <br>
+                    Email: contact@tuelinh.com <br>
+                    Tel: (04) 62824344 <br>
+                    Fax: (04) 62824263  <br>
                 </p>
                 <ul class="listSocial clearFix">
-                    <li><a href="#" class="fb">facebook</a></li>
+                    <li><a href="https://www.facebook.com/Lycoskin-1479050882396887" target="_blank" class="fb">facebook</a></li>
                     <li><a href="#" class="tw">twitter</a></li>
                     <li><a href="#" class="yu">youtube</a></li>
                 </ul>
@@ -36,4 +36,15 @@
             <p>2015 TuelinhPharmacy, inc. All rights reserved</p>
         </div>
     </div>
+	<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",13099]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69780025-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </footer>

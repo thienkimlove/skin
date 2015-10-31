@@ -8,7 +8,7 @@
                       <a href="{{url($mPost->category->slug)}}">{{$mPost->category->name}}</a>
                     </h3>
                     <div class="contentDetail">
-                        <h3>{{$mPost->title}}</h3>
+                        <h1>{{$mPost->title}}</h1>
                         <span class="date">{{ \Carbon\Carbon::parse($mPost->updated_at)->format('D/m/Y')}}</span>
                         {!! $mPost->content !!}
                     </div>

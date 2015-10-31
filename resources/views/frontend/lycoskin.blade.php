@@ -7,7 +7,7 @@
                     <ul class="proTabs clearFix">
                         <li class="tabLink active" data-tab="tabInfo">Thông tin sản phẩm</li>
                         <li class="tabLink" data-tab="tabChoose">Vì sao nên chọn Lycoskin</li>
-                        <li class="tabLink" data-tab="tabRate">Đánh giá</li>
+                        <li class="tabLink" data-tab="tabRate">Thông tin khoa học</li>
                     </ul>
                     <div id="tabInfo" class="tabProduct active">
                         {!! $settings['tab_product_content'] !!}
