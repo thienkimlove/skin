@@ -118,6 +118,31 @@
     });
   };
   //end
+  var slideHomepage = function(){
+        $('#slideHomepage').owlCarousel({
+            loop:true,
+            margin:0,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                640:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                1000:{
+                    items:1,
+                    nav:true,
+                    loop:true,
+                    dots: false
+                }
+            }
+        });
+    };
   /*equalHeight*/
    equalHeight($('.boxMedia .item, .boxProducts .proTabs li'));
     function equalHeight(obj) {
@@ -133,5 +158,6 @@
     slideShares();
     slideRelateds();
     showMenuMobile();
+    slideHomepage();
   });
 })(jQuery);

@@ -285,7 +285,7 @@ section, header, footer {
 }
 
 .boxBanner {
-  background: url("../imgs/bg/bgBanner.jpg") no-repeat center center;
+  /* background: url('../imgs/bg/bgBanner.jpg') no-repeat center center; */
   background-size: cover;
   height: 476px;
   margin-bottom: 20px;
@@ -897,6 +897,40 @@ section, header, footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.boxSlider .owl-controls .owl-nav .owl-prev, .boxSlider .owl-controls .owl-nav .owl-next {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  outline: 0;
+  width: 37px;
+  height: 48px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+.boxSlider {
+  margin-bottom: 10px;
+}
+.boxSlider .owl-controls .owl-nav .owl-prev {
+  left: 10px;
+  background: url(../imgs/bg/sprite.png) no-repeat -267px -51px;
+}
+.boxSlider .owl-controls .owl-nav .owl-prev:hover {
+  background-position: -216px -51px;
+}
+.boxSlider .owl-controls .owl-nav .owl-next {
+  right: 10px;
+  background: url(../imgs/bg/sprite.png) no-repeat -316px -51px;
+}
+.boxSlider .owl-controls .owl-nav .owl-next:hover {
+  background-position: -364px -51px;
 }
 
 .owl-carousel {
