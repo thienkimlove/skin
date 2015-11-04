@@ -4,12 +4,17 @@
         <div class="owl-carousel" id="slideHomepage">
             <div class="item">
                 <a class="thumb" href="" title="">
-                    <img src="imgs/temp/banner01.jpg"/>
+                    <img src="imgs/temp/Banner-03-01.jpg"/>
                 </a>
             </div>
             <div class="item">
                 <a class="thumb" href="" title="">
-                    <img src="imgs/temp/banner01.jpg"/>
+                    <img src="imgs/temp/Banner-03-02.jpg"/>
+                </a>
+            </div>
+            <div class="item">
+                <a class="thumb" href="" title="">
+                    <img src="imgs/temp/Banner-03-03.jpg"/>
                 </a>
             </div>
         </div>
