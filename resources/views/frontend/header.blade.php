@@ -1,6 +1,6 @@
 <header class="header">
     <div class="container">
-        <h1><a href="#" class="logo" title="Logo"><img src="{{url('imgs/logo.png')}}" alt="Lycoskin" width="295" height="60"></a></h1>
+        <h3><a href="#" class="logo" title="Logo"><img src="{{url('imgs/logo.png')}}" alt="Lycoskin" width="295" height="60"></a></h3>
         <div class="search">
             {!! Form::open(['method' => 'GET', 'url' =>  url('tim-kiem') ]) !!}
                 <input type="text" name="q" placeholder="Nhập nội dung cần tìm">
